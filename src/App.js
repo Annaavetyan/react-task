@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import './App.css';
+import './css/App.scss';
+import './css/hover.scss';
+import './css/responsive.scss';
+import ArticleBox from "./components/ArticleBox";
+
+
+
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <ArticleBox article = {props.state.article}/>
+  )
 }
 
 export default App;
